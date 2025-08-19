@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mantap WeatherApp powered by Open‑Meteo</title>
+  <meta name="description" content="Aplikasi web cuaca sederhana tanpa API key. Cari kota atau gunakan lokasi saya. Dibuat dengan HTML, CSS, dan JavaScript murni." />
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div data-include="components/header.html"></div>
+    <div class="status" id="status"></div>
+    <!-- Navbar -->
+    <div data-include="components/navbar.html"></div>
+
+    
+
+    <section class="grid">
+      <div class="card" id="panel-left">
+        <h2>Ringkasan Saat Ini</h2>
+        <div class="current" id="current">
+          <div class="icon" id="currentIcon" aria-hidden="true">—</div>
+          <div>
+            <div id="place" style="font-weight:700; font-size:18px">—</div>
+            <div class="row" style="margin-top:6px">
+              <div class="big-temp" id="temp">—</div>
+              <span class="pill" id="desc">—</span>
+            </div>
+            <div class="muted" id="time">—</div>
+          </div>
+        </div>
+        <div class="meta" style="margin-top:12px">
+          <div>Angin: <strong id="wind">—</strong></div>
+          <div>Kode Cuaca: <strong id="code">—</strong></div>
+          <div>Kelembapan: <strong id="humidity">—</strong></div>
+          <div>Curah Hujan: <strong id="precip">—</strong></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Perkiraan 7 Hari</h2>
+        <div class="forecast" id="forecast"></div>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top:16px">
+      <h2>Pencarian Terakhir</h2>
+      <div class="recent" id="recent"></div>
+    </section>
+
+    
+   <!-- Footer -->
+    <div data-include="components/footer.html"></div>
+
+  </div>
+
+  <!-- JS -->
+  <script src="assets/js/include.js"></script>
+  <script src="assets/js/app.js"></script>
+
+</body>
+</html>
